@@ -1,1 +1,40 @@
+import random
+
+welcome_messege = "WELCOME TO CUYPY GAMES!"
+cuypy_position = random.randint(1, 4)
+
+print("*****************************")
+print(f"** {welcome_messege} **")
+print("*****************************")
+
+nama_user = input("masukin nama kamu:  ")
+
+print(f'''
+hallo {nama_user}! Coba perhatikan goa di bawah ini 
+|_| |_| |_| |_|
+''')
+
+while True:
+    pilihan_user = int(input("Menurut kamu di goa berapa cuypy berada? [1 / 2 / 3/ 4]: "))
+    
+    while True:
+        konfirmasi = input("Apakah kamu yakin dengan pilihanmu?  (y/n): ")
+        
+        if konfirmasi == "y":
+            break
+        elif konfirmasi == "n":
+            print("Tidak yakin? Coba pilih lagi!")
+            break
+        else:
+            print("Input tidak valid, Silakan masukkan jawaban yang benar! y/n: ")
+        
+    if konfirmasi == "y":
+        break
+    
+    
+if pilihan_user == cuypy_position:
+    print(f"SELAMAT {nama_user} KAMU MENANG! posisi CUYPY ada di goa nomor {cuypy_position} dan pilihanmu adalah goa nomor {pilihan_user}.")
+else:
+    print(f"KAMU KALAH! cuypy bukan berada disitu! tapi ada di goa nomor {cuypy_position}. Sedangkan kamu memilih goa nomor {pilihan_user}")
+
 
